@@ -1,0 +1,760 @@
+QUESTION-1
+Sheela has three things in her bag. She wants to compute the area of 3 things but 3 things are in different shapes. The three things are in a square shape, rectangular shape, and circular shape respectively. Write a program to help Sheela to calculate the area of different shapes.
+ANSWER-1
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  
+    int s,l,b;
+    float r,a;
+    scanf("%d%d%d%f",&s,&l,&b,&r);
+    printf("%d\n",s*s);
+    printf("%d\n",l*b);
+    a=3.14*r*r;
+    printf("%.2f\n",a);
+    return 0;
+}
+
+
+QUESTION-2
+During the Physical Education hour, PT sir has decided to conduct some team games. He wants to split the students in the class into equal-sized teams. In some cases, there may be some students who are left out from teams and he wanted to use the left out, students, to assist him in conducting the team games. For instance, if there are 50 students in the class and if the class has to be divided into 7 equal-sized teams, 7 students will be there in each team and 1 student will be left out. PT sir asks your help to automate this team splitting task. Can you please help him out?
+ANSWER-2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int s,t;
+    scanf("%d%d",&s,&t);
+    int q,r;
+    q=s/t;
+    r=s%t;
+    scanf("%d%d",&q,&r);
+    printf("The number of students in each team is %d and left out is %d",q,r);
+    return 0;
+}
+
+
+QUESTION-3
+Alice wanted to start a business and she was looking for a venture capitalist. Through her friend Bob, she met the owner of a construction company who is interested to invest in an emerging business. Looking at the business proposal, the owner was very much impressed with Alice's work. So he decided to invest in Alice's business and hence gave a green signal to go ahead with the project. Alice bought Rs.X for a period of Y years from the owner at R% interest per annum. Find the rate of interest and the total amount to be given by Alice to the owner. The owner impressed by proper repayment of the financed amount decides to give a special offer of 2% discount on the total interest at the end of the settlement. Find the amount given back by Alice and also find the total amount. (Note: All rupee values should be in two decimal points).
+ANSWER-3
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int p,t,r; 
+    scanf("%d %d %d",&p,&t,&r); 
+    float i = (p*t*r)/100; 
+    printf("%.2f\n",i); 
+    float a= i+p; 
+    printf("%.2f\n",a); 
+    float d = (i*2)/100; 
+    printf("%.2f\n",d); 
+    float f=a-d ; 
+    printf("%.2f\n",f);
+    
+    return 0;
+}
+
+
+QUESTION-4
+Ajay, Binoy, and Chandru were very close friends at school. They were very good in Mathematics and they were the pet students of Emily Mam. Their gang was known as 3-idiots. Ajay, Binoy, and Chandru live in the same locality. A new student Dinesh joins their class and he wanted to be friends with them. He asked Binoy about his house address. Binoy wanted to test Dinesh's mathematical skills. Binoy told Dinesh that his house is at the midpoint of the line joining Ajay's house and Chandru's house. Dinesh was puzzled. Can you help Dinesh out? Given the coordinates of the 2 endpoints of a line (x1,y1) and (x2,y2), write a program to find the midpoint of the line.
+ANSWER-4
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   
+    int x1,y1,x2,y2;
+    scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+     float x,y;
+    x=((x1+x2)/2.0);
+    y=((y1+y2)/2.0);
+    printf("Binoy's house is located at (%.1f,%.1f)",x,y);
+    return 0;
+}
+
+
+QUESTION-5
+Each Sunday, a newspaper agency sells x copies of a certain newspaper for Rs.a per copy. The cost to the agency of each newspaper is Rs.b. The agency pays a fixed cost for storage, delivery and so on of Rs.100 per Sunday. The newspaper agency wants to calculate the profit obtained on Sundays. Can you please help them out by writing a program to compute the profit given x, a and b.
+ANSWER-5
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   
+    int x,a,b,p;
+    scanf("%d %d %d",&x,&a,&b);
+    p=(x*(a-b))-100;
+    printf("%d",p);
+    return 0;
+}
+
+
+QUESTION-6
+Write a program to get a float value from the user and display it in the below-mentioned format. HINT: Use ceil() and floor() functions.
+ANSWER-6
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float a;
+    scanf("%f",&a);
+    printf("%d\n%.1f\n%.1f\n",(int)a,ceil(a),floor(a));
+    return 0;
+}
+
+
+QUESTION-7
+There was a large ground in center of the city which is rectangular in shape. The Corporation decides to build a Cricket stadium in the area for school and college students, But the area was used as a car parking zone. In order to protect the land from using as an unauthorized parking zone , the corporation wanted to protect the stadium by building a fence. In order to help the workers to build a fence, they planned to place a thick rope around the ground. They wanted to buy only the exact length of the rope that is needed. They also wanted to cover the entire ground with a carpet during rainy season. They wanted to buy only the exact quantity of carpet that is needed. They requested your help. Can you please help them by writing a program to find the exact length of the rope and the exact quantity of carpet that is required?
+ANSWER-7
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int l,b,p,a;
+    scanf("%d %d",&l,&b);
+    a=l*b;
+    p=2*(l+b);
+    printf("%d\n%d",p,a);
+    return 0;
+}
+
+
+QUESTION-8
+Artagnan joined the group of 3 Musketeers and now their group is called four Musketeers. Meanwhile, d'Artagnan also moved to a new house in the same locality nearby to the other three. Currently, the houses of Athos, Porthos and Aramis are located in the shape of a triangle. When the three musketeers asked d'Artagnan about the location of his house, he said that his house is equidistant from the houses of the other 3. Can you please help them find out the location of the house? Given the 3 locations {(x1,y1), (x2,y2) and (x3,y3)} of a triangle, write a program to determine the point which is equidistant from all the 3 points.
+ANSWER-8
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+    int x1,y1,x2,y2,x3,y3;
+    scanf("%d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3);
+    printf("%.1f\n%.1f",(float)(x1+x2+x3)/3,(float)(y1+y2+y3)/3);
+    return 0;
+}
+
+
+QUESTION-9
+Though there have been more successful pirates, Blackbeard is one of the best-known and widely-feared of his time. He commanded four ships and had a pirate army of 300 at the height of his career and defeated the famous warship, HMS “Scarborough” in sea-battle. He was known for barreling into battle clutching two swords with several knives and pistols at the ready. He captured over forty merchant ships in the Caribbean and without flinching killed many prisoners. Now, Blackbeard and his three pirates found a treasure of gold coins. Long Ben too joined them. They decided to share the treasure. Blackbeard agreed to give x% share for Long Ben. He then decided to take y% share from the remaining treasure. His other pirates will share the remaining gold coins equally. Write a program to compute their share's.
+ANSWER-9
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,l,b,ls,bs,ps;
+    scanf("%d %d %d",&n,&l,&b);
+    ls=(n*l)/100;
+    bs=((n-ls)*b)/100;
+    ps=(n-(ls+bs))/3;  
+    printf("%d\n%d\n%d\n",ls,bs,ps);
+    return 0;
+}
+
+
+QUESTION-10
+You went on a tour to Ooty with your friends. As a part of the tour, you went boating with them. For the boat to remain stable, the number of people on one boat is restricted based on the weight of the people. You find that the boatman who is sailing your boat is so much greedy of money. For earning more, he takes too many people to travel in the boat at a time. So you want to check how many people can travel in the boat at a time so that the boat will not drown. Calculate the weight by considering the number of adults and number of children. Assume that an adult weighs 75 kg and children weigh 30 kg each. If the weight is normal, display Boat is stable, else display Boat will drown.
+ANSWER-10
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int w,a,c,sum;
+    scanf("%d %d %d",&w,&a,&c);
+    sum=((a*75)+(c*30));
+    if(sum<=w){
+        printf("Boat is stable");
+    }
+    else{
+        printf("Boat will drown");
+    }
+    return 0;
+}
+
+
+QUESTION-11
+Write a program to find whether a given character is an uppercase, lowercase, number or symbol. If it is an alphabet find whether it is an Uppercase or Lowercase. If it is a number display Number else display Symbol.
+ANSWER-11
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    char ch;
+    scanf("%c",&ch);
+    if(ch>=65 && ch<=90){
+        printf("Upper");
+    }
+    else if(ch>=97 && ch<=122){
+        printf("Lower");
+    }
+     else if(ch>=48 && ch<=57){
+        printf("Number");
+    }
+    else{
+        printf("Symbol");
+    }
+    return 0;
+}
+
+
+QUESTION-12
+Accept total number of participants in class. A group of four divisions has to be created from registered participants. Total no of participants “P” 100>=p<=200 Note: If number of participants entered by user is less than 100 or greater than 200 display “INVALID INPUT” and quit.
+ANSWER-12
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+    int p,n,l;
+    scanf("%d",&p);
+    if(p>=100 && p<=200){
+        n=p/4;
+        l=p-(n*3);
+        printf("%d\n%d\n%d\n%d\n",n,n,n,l);
+    }
+    else{
+        printf("INVALID INPUT");
+    }
+    return 0;
+}
+
+
+QUESTION-13
+Accept two integer values from the user and return their product. If the product is greater than 1000, then return their sum
+ANSWER-13
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+    int a,b,p;
+    scanf("%d\n%d\n",&a,&b);
+    p=a*b;
+    
+    if(p>1000){
+        printf("%d",(a+b));
+    }
+    else{
+        printf("%d",p);
+    }
+    return 0;
+}
+
+
+QUESTION-14
+Write a program to return the nearest 10 multiple of any given number
+ANSWER-14
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,r;
+    scanf("%d",&n);
+    r=n%10;
+    if(r>=5){
+       printf("%d",(n+10-r));
+    }
+    else{
+        printf("%d",(n-r)); 
+    }
+    return 0;
+}
+
+
+QUESTION-15
+There is a practice of showing a cinema in the auditorium of a college on a cinema day. A cinema day is a day where the sum of Day(D), Month(M), Year(Y)should be divisible by product of 3 and 4. On that particular day the total number of students in the hostel should be greater than 50 but less than 100. Write a program to find whether the given day is cinema day or not.
+Output Format:
+Print Cinema Day or Not a Cinema Day
+ANSWER-15
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  
+    int d,m,y,n;
+    scanf("%d%d%d%d",&d,&m,&y,&n);
+    if((d+m+y)%(3*4)==0)
+    {
+        if(n>50 && n<100)
+        {
+            printf("Cinema Day");
+        }
+        else{
+            printf("Not a Cinema Day");
+        }
+    }
+    else{
+        printf("Not a Cinema Day");
+    }
+    return 0;
+}
+
+
+QUESTION-16
+Write a program to check whether the person is eligible to donate blood. Age must be 18 or above. Weight must be 45 or above. Hemoglobin must be 5.5 or above.
+Output Format:
+Eligible then display He or She can donate blood Not eligible then display He or She unable to donate blood
+ANSWER-16
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   
+    int a,w;
+    float h;
+    scanf("%d%d%f",&a,&w,&h);
+    if(a>=18){
+        if(w>=45){
+            if(h>=5.5){
+                printf("He or She can donate blood ");
+            }
+            else{
+                printf("He or She unable to donate blood");
+            }
+        }
+        else{
+            printf("He or She unable to donate blood");
+        }
+    }
+    else{
+        printf("He or She unable to donate blood");
+    }
+    return 0;
+}
+
+
+QUESTION-17
+“VideoShare” is an online video sharing platform. The company has decided to rate its users channels based on the sum total of the number of views received online and the subscribers. The sum total is reffered to as user points. The rating will be given according to the below charts:
+
+User points ratings: 30-50 Average 51-60 Good 61-80 Excellent 81-100 Outstanding
+
+The whole process is automated and it can be carried out by the company’s system.
+Output Format:
+Print rating if not possible print "Invalid Input"
+ANSWER-17
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int usrpt;
+    scanf("%d",&usrpt);
+    if(usrpt>30 && usrpt<50)
+    {
+        printf("Average");
+    }
+    else if(usrpt>51 && usrpt<60){
+        printf("Good");
+    }
+    else if(usrpt>61 && usrpt<80){
+        printf("Excellent");
+    }
+    else if(usrpt>81 && usrpt<100){
+        printf("Outstanding");
+    }
+    else{
+        printf("Invalid Input");
+    }
+    return 0;
+}
+
+
+QUESTION-18
+Mr.Kumar went to purchase stationary items for his office. He asked the shopkeeper for a discount. The shopkeeper said that if he purchases more than 200 quantity of the item, then a discount of 20% can be applied on the total bill amount, excluding the GST. Get the Quantity and price per item as an input and calculate and tell whether Mr.Kumar is eligible for the discount and what would be the net amount he has to pay after the discount. Take the GST at 18%. Net Amount = Total bill amount after discount + GST
+ANSWER-18
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int q,p;
+    scanf("%d%d",&q,&p);
+    printf("Quantity Ordered %d\n",q);
+    printf("Price per item is Rs.%d\n",p);
+    int t=(q*p);
+    printf("Total Amount = Rs.%d\n",t);
+    if(q>200){
+        float dis=(t*20)/100;
+        printf("Discount Earned = Rs.%.1f\n",dis);
+        float b=t-dis;
+        printf("Amount after Discount - Rs.%.1f\n",b);
+        t=b;
+    }
+     float gst=t*0.18;
+    printf("GST - Rs.%.1f\n",gst);
+    float n=t+gst;
+    printf("Net Amount Payable is Rs.%.1f\n",n);
+   
+    return 0;
+}
+
+
+QUESTION-19
+Electricity board has decided to charge rupees based on the units consumed by a particular home. If the units consumed is less than or equal to 200, the cost for one unit is 0.5. If the unit is less than or equal to 400, the cost for one unit is 0.65 and Rs.100 extra charge. If the unit is less than or equal to 600, the cost for one unit is 0.80 and Rs.200 extra charge. If the unit is greater than 600 the cost for one unit is 1.25 and Rs.425 extra charge. You need to now calculate the electricity bill based on the units consumed (given input).
+ANSWER-19
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int u,r;
+    scanf("%d%d",&u,&r);
+    if(u<=200)
+    {
+        r=u*0.5;
+        printf("Rs.%d",r);
+    }
+   else if(u<=400)
+    {
+        r=(u*0.65)+100;
+        printf("Rs.%d",r);
+    }
+    else if(u<=600)
+    {
+        r=(u*0.80)+200;
+        printf("Rs.%d",r);
+    }
+    else if(u>600)
+    {
+        r=(u*1.25)+425;
+        printf("Rs.%d",r);
+    }
+    return 0;
+}
+
+
+QUESTION-20
+Write a program to generate the following series 7, 5, 8, 6, 9….
+ANSWER-20
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  
+    int a=7,b=5,i=3,n;
+    scanf("%d",&n);
+    printf("%d ",a);
+    printf("%d ",b);
+    while(i<=n){
+        if((i%2)==1){
+            a=a+1;
+            printf("%d ",a);
+        }
+        else{
+            b=b+1;
+            printf("%d ",b);
+        }
+    
+     i++;   
+    }
+    return 0;
+}
+
+
+QUESTION-21
+Write a program to print the sum of a given range of numbers
+ANSWER-21
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int n,m,sum=0,i;
+    scanf("%d%d",&n,&m);
+    i=n;
+    while(i<=m){
+        sum=sum+i;
+        i++;
+    }
+     printf("%d",sum);
+    return 0;
+}
+
+
+QUESTION-22
+Write a program to print the sum of the given numbers. The values must be scanned until the user enters -1 as value.
+ANSWER-22
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  
+    int sum=0,n;
+    scanf("%d",&n);
+      while(n!=-1){
+          
+          sum=sum+n;
+          scanf("%d",&n);
+      }
+    printf("%d",sum);
+    return 0;
+}
+
+
+QUESTION-23
+An e-commerce company plans to give their customers a discount for the New Years holiday. The discount will be calculated on the basis of the bill amount of the order placed. The discount amount is the sum of all the odd digits on the customer’s total bill amount. If no odd digit is present in the bill amount, then the discount will be zero. Write an algorithm to find a discount for the given total bill amount.
+ANSWER-23
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+    int i,n,sum=0;
+    scanf("%d",&i);
+    while(i>0){
+        n=i%10;    
+        if(n%2!=0){
+            sum=sum+n;
+        }   
+        i=i/10;
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+
+QUESTION-24
+Write a program to check whether the given number is an Armstrong number or not. Armstrong Number:abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + .... where n represents the number of digits
+ANSWER-24
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+ 
+   int i,sum=0,n,d,p,temp;
+    scanf("%d",&i);
+    temp=i;
+    d=(int)log10(i)+1;
+    while(i!=0){
+        n=i%10;
+        p=(int)(pow(n,d)+0.5);
+        i=i/10;
+        sum=sum+p;
+    }
+    if(temp==sum){
+        printf("Yes");
+    }
+       else{
+           printf("No");
+       }
+    return 0;
+}
+
+
+QUESTION-25
+Write a program to display all the Prime Numbers between a given range of numbers.
+ANSWER-25
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int a,b,i,j,flag;
+    scanf("%d%d",&a,&b);
+
+    for(i=a;i<=b;i++) 
+    { 
+        if(i==1||i==0)
+            continue;
+        flag=1;
+        for(j=2;j<=i/2;++j) 
+        {
+            if(i%j==0) 
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)
+            printf("%d ",i);
+    }
+
+    return 0;
+}
+
+
+QUESTION-26
+Write a program to find the sum of the series 2 +22 + 222 + 2222 + .. n terms
+ANSWER-26
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i=1,n,sum=0,val=2;
+    scanf("%d",&n);
+    while(i<=n){
+      sum=sum+val;
+        val=val*10+2;
+        i++;
+    }
+    printf("%d",sum);
+   
+    return 0;
+}
+
+
+QUESTION-27
+A supermarket maintains a pricing format for all its products. A value N is printed on each product. When the scanner reads the value N on the item, the product of all the digits in the value N is the price of the item. The task here is to design the software such that given the code of any item N the product (multiplication) of all the digits of value should be computed(price).
+ANSWER-27
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i,p=1,n;
+    scanf("%d",&i);
+    while(i!=0){
+        n=i%10;
+        if(n!=0){
+            p=p*n;
+        }
+        i=i/10;
+    }
+    printf("%d",p);
+    return 0;
+}
+
+
+QUESTION-28
+The Torres county visa center generates the token number for its applicants from their application ID. The application ID is a numeric value. The token number generated in a specific form. The even digits in the applicant’s ID are replaced by the digit one greater then the even digit and the odd digits in the applicant’s ID are replaced by the digit one less than the odd digit. The numeric value thus generated represents the taken number of the applicant.
+ANSWER-28
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,r=0,sum=0,v;
+    scanf("%d",&n);
+    while(n!=0){
+        r=n%10;
+        n=n/10;
+        if(r%2==0){
+            r=r+1;
+        }
+        else{
+            r=r-1;
+        }
+        sum=sum*10+r;
+    }
+   while(sum!=0){
+       r=sum%10;
+       sum=sum/10;
+       v=v*10+r;
+   }
+    printf("%d",v);
+    return 0;
+}
+
+
+QUESTION-29
+The cosmetic company “BeautifyMe” has decided to reward its brand promoters with a batch of cosmetics. Each batch is identified by a unique numeric barcode. Each digit of the barcode number represents a product ID of the products present in the batch. Before distributing the products to its promoters, the company wants to make sure that all products present in the batch are still fresh and safe to use. The distribution center has therefore been advised to identify the oldest product in each batch is the one with the smallest product ID. There can be multiplies of the same product in one batch.
+ANSWER-29
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,r,p=9;
+    scanf("%d",&n);
+    while(n!=0){
+        r=n%10;
+        n=n/10;
+        if(p>r){
+            p=r;
+        }
+        
+    }
+    printf("%d",p);
+    return 0;
+}
+
+
+QUESTION-30
+An e-commerce website wishes to find the lucky customer who will be eligible for full value cash back. For this purpose, a number N is fed to the system. It will return another number that is calculated by an algorithm. In the algorithm, a sequence is generated, in which each number is the sum of the two proceeding numbers. Initially the sequence will have two 1’s in it. The system will return the Nth number from the generated sequence which is treated as the order ID. The lucky customer will be the one who has placed that order. Write an algorithm to help the website find the lucky customer.
+The sequence generated by the system will be 1,1,2,3,5,8,13,21......
+ANSWER-30
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   int i,n,t1,t2,nextTerm;
+    scanf("%d",&n);
+    t1=1;t2=1;
+  nextTerm=t1+t2;
+  for(i=3;i<=n;++i) {
+    t1=t2;
+    t2=nextTerm;
+    nextTerm=t1+t2;
+  }
+printf("%d",t2);
+    return 0;
+}
