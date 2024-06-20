@@ -1,0 +1,1518 @@
+QUESTION-1
+Print the pattern
+*****
+ ****
+  ***
+   **
+    *
+ANSWER-1
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j,k;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        for(j=0;j<i;j++){
+            printf(" ");
+        }
+        for(k=0;k<n-i;k++){
+            printf("*");
+        }
+        printf("\n");
+    }
+   
+    return 0;
+}
+
+
+QUESTION-2
+Given below is the cross pattern has the shape of the mathematical cross sign (X).
+*   *
+ * * 
+  *  
+ * * 
+*   *
+ANSWER-2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {    
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+              if(j==i || j==n-1-i)
+                printf("*");
+            else 
+                printf(" ");
+            
+        }   
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-3
+Print the pattern
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * * 
+* * * 
+* * * 
+* * * 
+* * * 
+* * * 
+* * * 
+* * * 
+* * * 
+* * * 
+ANSWER-3
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,j,i;
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++){
+         for(j=1;j<=i;j++){
+             printf("* ");
+         }
+        printf("\n");
+    }
+    
+    for(i=1;i<=n-1;i++){
+         for(j=1;j<=n/3;j++){
+             printf("* ");
+         }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-4
+Print the pattern
+* 
+* * * 
+* * * * * 
+* * * * * * * 
+* * * * * * * * *
+ANSWER-4
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++){
+        for(j=0;j<(2*i-1);j++){
+            printf("*");
+            if(j<(2*i-2)){
+                printf(" ");
+            }
+        }
+       printf("\n"); 
+    }
+    return 0;
+}
+
+
+QUESTION-5
+Printing Stars '*' in Pyramid Shape
+   * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ANSWER-5
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n-i;j++){
+            printf(" ");
+        }
+        for(j=1;j<=i;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-6
+Printing Stars '*' in Reverse Pyramid Shape
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+ANSWER-6
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=n;i>=1;i--){
+        for(j=0;j<n-i;j++){
+            printf(" ");
+        }
+        for(j=0;j<i;j++){
+            printf("*");
+            if(j<i-1)
+                printf(" ");
+        }
+        printf("\n");
+    }
+
+}
+
+
+QUESTION-7
+Printing Stars '*' in Diamond Shape
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+ANSWER-7
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n-i;j++){
+            printf(" ");
+        }
+        for(j=1;j<=i;j++){
+            printf("*");
+            if(j<i)
+                printf(" ");
+        }
+        printf("\n");
+    }
+    
+    
+      for(i=n-1;i>=1;i--){
+        for(j=1;j<=n-i;j++){
+            printf(" ");
+        }
+        for(j=1;j<=i;j++){
+            printf("*");
+            if(j<i)
+                printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-8
+Printing Stars in Hollow Left Triangle Shape
+* 
+* * 
+*   * 
+*     * 
+* * * * *
+ANSWER-8
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+     for(i=1;i<=n;i++){
+         for(j=1;j<=n;j++){
+             if(j==1 || j==i || i==n) {
+                printf("* ");
+            } else {
+                printf("  ");
+            }
+             
+             
+         }
+          printf("\n");
+     }
+    return 0;
+}
+
+
+QUESTION-9
+Printing Stars in Hollow Right Triangle Shape
+* * * * * 
+  *     * 
+    *   * 
+      * * 
+        * 
+ANSWER-9
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++){    
+         for(j=0;j<i;j++){
+                printf("  ");
+            } 
+            for(j=0;j<n-i;j++){
+             if(j==0 || j==n-i-1 || i==0){
+                printf("* ");
+            } else{
+                printf("  ");
+            }
+            
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-10
+Printing Stars in Hollow Equilateral Triangle Shape
+     * 
+    * * 
+   *   * 
+  *     * 
+ *       * 
+* * * * * * 
+ANSWER-10
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    for(i=1;i<n;i++){
+        for(j=0;j<n-i;j++){
+            printf(" ");            
+        }
+        printf("*");
+        for(j=0;j<2*i-3;j++){
+            printf(" "); 
+        }
+         if(i!=1) {
+            printf("*");
+        }
+        printf("\n");        
+    }
+    
+     for(i=0;i<n;i++){
+        printf("* ");
+    }
+    printf("\n");
+    return 0;
+}
+
+
+QUESTION-11
+Floyd's Triangle | Printing Numbers in Right Triangle Shape
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+16 17 18 19 20 21 
+ANSWER-11
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n;
+    scanf("%d", &n);
+    
+    int num=1;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ARRAYS-1:
+QUESTION-1
+Write a program to sum of even and odd elements in an array.
+ANSWER-1
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int a[n],i,esum=0,osum=0;
+        for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++){
+        if(a[i]%2==0)
+            esum=esum+a[i];
+        else
+            osum=osum+a[i];
+    }
+    printf("%d\n",osum);
+     printf("%d",esum);   
+    return 0;
+}
+
+
+QUESTION-2
+Write a program to find the maximum element in an array.
+ANSWER-2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     int n;
+    scanf("%d",&n);
+    int a[n],i,max;
+        for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    max=a[0];
+    
+    for(i=0;i<n;i++){
+        if(max<a[i])
+            max=a[i];
+    }
+    printf("%d\n",max);
+    return 0;
+}
+
+
+QUESTION-3
+Write a program to find whether the two arrays are the same or not. Two arrays are said to be the same if the elements of both the arrays is the same and the size of arrays is the same.
+ANSWER-3
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m,count=0;        
+    scanf("%d %d",&n,&m);
+    int a[n],b[m],i;
+    
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+     for(i=0;i<m;i++)
+        scanf("%d",&b[i]);
+    
+    
+    if(n==m){
+        for(i=0;i<n;i++){
+            if(a[i]==b[i]){
+                count++;
+                
+            }
+            
+        } 
+        }        
+        
+        
+    if(count==n)
+         printf("Same");
+    else
+         printf("Not Same"); 
+    return 0;
+}
+
+
+QUESTION-4
+Write a program to sort the given array in ascending order
+ANSWER-4
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,temp=0,j;        
+    scanf("%d",&n);
+    int a[n],i;
+    
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-i-1;j++) {
+            if(a[j]>a[j+1]){
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+    
+    for(i=0;i<n;i++)
+        printf("%d\n",a[i]);
+    return 0;
+}
+
+
+QUESTION-5
+Write a program to insert an element in an array at the given position. If the position where the element is to be inserted is greater than the size of the array display “Invalid Input”.
+ANSWER-5
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   int n;
+    scanf("%d",&n);
+    
+    int a[n+1],i,index,ele;
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    scanf("%d%d",&index,&ele);
+    
+    
+    if(index>n || index<1){
+        printf("Invalid Input");
+        return 0;
+    }
+    
+    index--;
+    for(i=n;i>index;i--)
+        a[i]=a[i-1];
+    a[index]=ele;
+    
+    for(i=0;i<=n;i++)
+        printf("%d\n",a[i]);
+    return 0;
+}
+
+
+QUESTION-6
+Write a program to delete an element from the given location in an array. If index is out of range then print "Invalid Input"
+ANSWER-6
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n,i,index;
+    scanf("%d",&n);
+    
+    int a[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&index);
+    
+    if(index>n || index<1){
+           printf("Invalid Input");
+           return 0;
+    }
+    index--;
+    for(i=index;i<n-1;i++) {
+            a[i]=a[i+1];
+        }
+    n--;
+    
+    for(i=0;i<n;i++)
+      printf("%d\n",a[i]);
+    return 0;
+}
+
+
+QUESTION-7
+A company wishes to provide cab service for their N employees. The employees have distance ranging from 0 to N-1. The company has calculated the total distance from an employee’s residence to the company, considering the path to be followed by the cab is a straight path. The distance of the side of the company is represented with a negative sign. The distance for the employees who live to the right side of the company is represented with a positive sign. The cab will be allotted a range of distance. The company wishes to find the distance for the employees who live within the particular distance range. Write an algorithm to find the distance for the employees who live within the distance range.
+ANSWER-7
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n,sr,er;
+    scanf("%d %d %d\n",&n,&sr,&er);
+    int a[n-1],i;
+    for(i=0;i<n;i++)
+        scanf("%d ",&a[i]);
+    
+    for(i=0;i<n;i++){
+       if(a[i]>=sr && a[i]<=er)
+       {
+           printf("%d ",a[i]);
+       }
+    }
+    return 0;
+}
+
+
+QUESTION-8
+In an online maths tutorial a student is given a list of N numbers. From this list, the student is required to sum each element in the list such that the ith element in the output list will be equal to the sum to the first element until the ith element in the list.
+ANSWER-8
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    
+    int a[n],i;
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    for(i=1;i<n;i++){
+        a[i]=a[i-1]+a[i];
+    }
+    
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);
+    return 0;
+}
+
+
+QUESTION-9
+Write a program to calculate and return the sum of distances between the adjacent numbers In an array of positive integers
+ANSWER-9
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n,sum=0;
+    scanf("%d",&n);
+    
+    int a[n],i;
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    for(i=0;i<n-1;i++){
+        
+        
+        sum=sum+abs(a[i]-a[i+1]);     
+        
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+
+QUESTION-10
+Andrew is a stock trader who trades in N selected stocks. He has calculated the relative stock price changes in the N stocks from the previous day stock prices. Now, his lucky number is K, so he wishes to invest in the particular stock that has Kth smallest relative stock value. Write an algorithm for Andrew to find the Kth smallest stock price out of the selected N stocks.
+ANSWER-10
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {  
+   int n,k;
+    scanf("%d %d\n",&n,&k);
+    int a[n],i,j,temp=0;
+    for(i=0;i<n;i++)
+        scanf("%d ",&a[i]);
+
+     for(i=0;i<n-1;i++){
+        for(j=0;j<n-i-1;j++) {
+            if(a[j]>a[j+1]){
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+    
+    k--;
+    
+    for(i=k;i<=k;i++){
+   
+            printf("%d ",a[i]);
+    }
+    
+    return 0;
+}
+
+
+QUESTION-11
+In a science research lab, combining two nuclear chemicals produces a maximum energy that is the product of the energy of the two chemicals. The energy values of the chemicals can be negative or positive. The scientist wishes to calculate the sum of the maximized energies of the two elements when the reaction happens. Write an algorithm to find the total energy produced by the chemicals when the reaction happens.
+ANSWER-11
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     int n,temp=0,j,sum=0;        
+    scanf("%d",&n);
+    int a[n],i;
+    
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-i-1;j++) {
+            while(a[j]>a[j+1]){
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+     for(i=0;i<n;i++)
+    sum=a[n-2]+a[n-1];
+    printf("%d",sum);
+
+    return 0;
+}
+
+
+QUESTION-12
+The garments company Apparel wishes to open outlets at various locations. The company shortlisted several plots in these locations and wishes to select only plots that are square- shaped. Write an algorithm to help Apparel find the number of plots that it can select for its outlets.
+ANSWER-12
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n,count,root;
+    scanf("%d",&n);
+    
+    int a[n],i;
+    for(i=0;i<n;i++)
+        scanf("%d ",&a[i]);
+    
+    for(i=0,count=0;i<n;i++){
+         root = (int)sqrt(a[i]);
+    if(root * root == a[i]){
+        count++;
+    }   
+    }
+    
+    printf("%d",count);
+    return 0;
+}
+
+
+QUESTION-13
+Students in a class have been assigned a unique ID. As part of a quiz competition, the class teacher wishes to form two different groups from the N number of students who are participating the quiz. All participants are currently sitting a random manner, but teacher wishes all of them to sit according their ID’s. Two groups will be formed in such a way that students whose seat number in an odd number will be the first group and students whose seat number is an even number will be in the second group. Write an algorithm to find the list of which students IDs should be in the first group, followed by the student ID’s which should be in the second group as per the teacher’s instructions.
+ANSWER-13
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a[50],i,n,j,temp;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n-1;i++){
+        for(j=0;j<n-i-1;j++) {
+            if(a[j]>a[j+1]){
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+        }
+    }
+     for(i=0;i<n;i++)
+         if(i%2==0)
+           printf("%d ",a[i]);
+    
+    for(i=0;i<n;i++)
+         if(i%2!=0)
+             printf("%d ",a[i]);
+          
+    return 0;
+}
+
+
+QUESTION-14
+A chocolate factory is packing chocolates into the packets. The chocolate packets here represent an array arrt of N number of integer values. The task is to find the empty packets(0) of chocolate and push it to the end of the conveyor belt(array).
+
+For Example: N=7 and arr = [4,5,0,1.9,0,5,0]. There are 3 empty packets in the given set. These 3 empty packets represented as O should be pushed towards the end of the array
+ANSWER-14
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+     int n,i,j,temp;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++) {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++) {
+        if(a[i]==0) {
+            temp=a[i];
+            for(j=i;j<n-1;j++) {
+                a[j]=a[j+1];
+            }
+            a[n-1]=temp;
+        }
+    }
+    for(i=0;i<n;i++) {
+        printf("%d ",a[i]);
+    }
+  
+    return 0;
+}
+
+
+QUESTION-15
+A party has been organised on cruise. The party is organised for a limited time(T). The number of guests entering (E[i]) and leaving (L[i]) the party at every hour is represented as elements of the array. The task is to find the maximum number of guests present on the cruise at any given instance within T hours.
+ANSWER-15
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {    
+   int n,sum,s=0;
+    scanf("%d",&n);
+    int e[n],l[n],i;
+    
+    for(i=0;i<n;i++)
+        scanf("%d",&e[i]);
+    
+    for(i=0;i<n;i++)
+        scanf("%d",&l[i]);
+    
+    s=e[0]-l[0];
+         
+    for(i=0,sum=0;i<n;i++){
+        sum=sum+e[i]-l[i];
+        
+        if(s<sum){
+           s=sum;
+        }
+        
+    }
+   
+    printf("%d",s);
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ARRAYS-2:
+QUESTION-1
+Write a program for Matrix Addition
+ANSWER-1
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m,i,j;
+    scanf("%d %d",&n,&m);
+    
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&a[i][j]);
+    }
+    int b[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&b[i][j]);
+    }
+    int r[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+             r[i][j] = a[i][j]+b[i][j];
+    }
+
+   for (i=0;i<n;i++) {
+        for (j=0;j<m;j++){
+            printf("%d ", r[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+QUESTION-2
+Write a program to find the element of maximum value in each row.
+ANSWER-2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {  
+    int n,m,i,j,max;
+    scanf("%d %d",&n,&m);
+    
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&a[i][j]);
+    }
+   for (i=0;i<n;i++) {
+       max=a[i][0];
+        for (j=0;j<m;j++){
+            
+            if(a[i][j]>max)
+            max=a[i][j];
+        }
+        printf("%d\n",max);
+       
+    }
+    return 0;
+}
+
+
+QUESTION-3
+Write a program to find the sum of elements in each row.
+ANSWER-3
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m,i,j,sum=0;
+    scanf("%d %d",&n,&m);
+    
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&a[i][j]);
+    }
+   for (i=0;i<n;i++) {
+       sum=0;
+        for (j=0;j<m;j++){
+            
+            sum=sum+a[i][j];
+            
+        }
+        printf("%d\n",sum);
+       
+    }
+    return 0;
+}
+
+
+QUESTION-4
+Write a program to find the sum of elements in each column.
+ANSWER-4
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m,i,j,sum;
+    scanf("%d %d",&n,&m);
+    
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&a[i][j]);
+    }
+   for (i=0;i<m;i++) {
+        sum=0;
+        for (j=0;j<n;j++){
+            
+            sum=sum+a[j][i];
+            
+        }
+        printf("%d\n",sum);
+       
+    }
+    return 0;
+}
+
+
+QUESTION-5
+Write a program to find the sum of elements in each row and column and also to find the greatest sum in rows and columns.
+ANSWER-5
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int n,m,i,j;
+    scanf("%d %d",&n,&m);
+    
+    int a[n][m];
+    for(i=0;i<n;i++){
+        for(j=0;j<m;j++)
+            scanf("%d ",&a[i][j]);
+    }
+    int mrsum=0,mrindex=0,mcsum=0,mcindex=0;
+
+    for(i=0;i<n;i++){
+        int rsum=0;
+        for(j=0;j<m;j++)
+            rsum+=a[i][j];
+        if(rsum>mrsum) {
+            mrsum=rsum;
+            mrindex=i+1;
+        }
+        printf("%d ",rsum);
+    }
+    printf("\nRow %d\n",mrindex);
+    for(j=0;j<m;j++){
+        int csum=0;
+        for(i=0;i<n;i++)
+            csum+=a[i][j];
+        if(csum>mcsum){
+            mcsum=csum;
+            mcindex=j+1;
+        }
+        printf("%d ",csum);
+    }
+    printf("\nColumn %d\n",mcindex);
+    return 0;
+}
+
+
+QUESTION-6
+There is a treasure full of gold and diamonds. Jack Sparrow successfully reached the cave with his black pearl. He is reading a hint on a box that he need to tilt it 90 degree clock wise. But he don't know what to tilt. Finally when he reaches the door there is a dial pad. He remember the hint in the box and he opened the box where it has numbers printed in N x N form. Now he is tilting the same to 90 degree and seeing the numbers. He couldn't see and type on same time. So write a program to print the 2D matrix which will be helpful for him to type easily.
+ANSWER-6
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int n,i,j;
+    scanf("%d",&n);
+    
+    int a[n][n];
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++)
+            scanf("%d ",&a[i][j]);
+    }
+    
+    int r[n][n];
+     for(i=0;i<n;i++){
+        for(j=0;j<n;j++)
+             r[j][n-1-i] = a[i][j];
+            
+         }
+    
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++)
+            printf("%d ",r[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+STRINGS:
+QUESTION-1
+Write a program to find whether the given two strings are same or not 
+ANSWER-1
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {  
+    char ch1[50],ch2[50];
+    gets(ch1);
+    gets(ch2);
+    int i=strcmp(ch1,ch2);
+    if(i==0)
+        printf("Strings are same");
+    else
+        printf("Strings are not same");
+    return 0;
+}
+
+
+QUESTION-2
+Write a program to find the concatenation of the given two strings
+ANSWER-2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  char ch1[50],ch2[50];
+    gets(ch1);
+    gets(ch2);
+    
+    printf("%s %s",ch1,ch2);
+    return 0;
+}
+
+
+QUESTION-3
+Write a program to change the given string to uppercase.
+ANSWER-3
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char ch1[50];
+    int i;
+    gets(ch1);
+    for(i=0;ch1[i]!='\0';i++){
+        if(ch1[i]>='a'&& ch1[i]<='z'){
+            ch1[i]=ch1[i]-32;
+        }
+        
+    }
+    printf("%s",ch1);
+    return 0;
+}
+
+
+QUESTION-4
+Read a stirng and convert upper case into lower case and vice versa
+ANSWER-4
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     char ch1[50];
+    int i;
+    gets(ch1);
+    for(i=0;ch1[i]!='\0';i++){
+        if(ch1[i]>='a'&& ch1[i]<='z'){
+            ch1[i]=ch1[i]-32;
+        }
+        else if(ch1[i]>='A'&& ch1[i]<='Z'){
+            ch1[i]=ch1[i]+32;
+        }
+    }
+    printf("%s",ch1);
+    return 0;
+}
+
+
+QUESTION-5
+Write a program to find whether the given string is a palindrome or not
+ANSWER-5
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   char ch1[50],ch2[50];
+    int i,j,n,temp;
+    gets(ch1);
+       strcpy(ch2,ch1);
+
+    for(i=0;ch1[i]!='\0';i++) ;
+        n=i;
+    i=0;
+    j=n-1;
+    while(i<j){
+        temp=ch1[i];
+        ch1[i]=ch1[j];
+        ch1[j]=temp;
+        i++;
+        j--;
+    }
+   
+     i=strcmp(ch1,ch2);
+    if(i==0)
+        printf("Palindrome");
+    else
+        printf("Not a Palindrome");
+    return 0;
+}
+
+
+QUESTION-6
+Write a program to count the number of vowels in the given string.
+ANSWER-6
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+      int i=0,count=0;
+  char ch[50];
+  
+  gets(ch);
+
+  while(ch[i]!='\0') {
+    if(ch[i]=='a'||ch[i]=='A'||ch[i]=='e'||ch[i]=='E'||ch[i]=='i'||ch[i]=='I'||ch[i]=='o'||ch[i]=='O'||ch[i]=='u'||ch[i] == 'U')
+      count++;
+    i++;
+  }
+  printf("%d", count);
+    return 0;
+}
+
+
+QUESTION-7
+Write a program to sort the given string.
+ANSWER-7
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {  
+     char ch[100],temp;
+ int i, j;
+    gets(ch);
+   int n = strlen(ch);
+   for(i=0;i< n-1;i++) {
+      for(j=i+1;j<n;j++) {
+         if(ch[i] > ch[j]) {
+            temp = ch[i];
+            ch[i] = ch[j];
+            ch[j] = temp;
+         }
+      }
+   }
+   
+   printf("%s", ch);
+    return 0;
+}
+
+
+QUESTION-8
+Write a program to delete the vowels in the given string and display the string without vowels.
+ANSWER-8
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i=0,n,j;
+  char ch[50];
+  
+  gets(ch);
+n=strlen(ch);
+    for(i=0;i<n;i++)
+  {
+    if(ch[i]=='a'||ch[i]=='A'||ch[i]=='e'||ch[i]=='E'||ch[i]=='i'||ch[i]=='I'||ch[i]=='o'||ch[i]=='O'||ch[i]=='u'||ch[i] == 'U')
+    {
+        for(j=i;j<n;j++){
+            ch[j]=ch[j+1];
+        }
+        i--;
+        n--;
+    }
+        ch[n+1]='\0';
+    }
+    
+ printf("%s",ch);
+    return 0;
+}
+
+
+QUESTION-9
+Given a string containing alphanumeric characters, calculate the sum of all numbers present in the string.
+ANSWER-9
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {   
+    char ch[100];
+    int i,sum=0;
+ gets(ch);
+    for(i=0;ch[i]!='\0';i++)
+    {
+        if ((ch[i]>='0') && (ch[i]<='9'))
+        {
+            sum=sum+(ch[i]-'0');
+        }
+    }
+    printf("%d", sum);
+    return 0;
+}
+
+
+QUESTION-10
+These days kids are introduced to computers at a very early age. The kids are taught about alphabets, digits and blank spaces. The teacher asked the students to count the vowels, consonants, digits and white spaces in a string. The teacher found it a bit difficult to evaluate these tests and she knew that the 12th class students are learning C programming. So she assigned this task to them to count the vowels, consonants, digits and white spaces in a string. Can you please help them out? Write a program to count the vowels, consonants, digits, white spaces, and symbols in a string.
+ANSWER-10
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    char ch[200];
+    int i,v=0,c=0,s=0,d=0,sy=0,l;
+    gets(ch);
+    l=strlen(ch);
+    for(i=0;i<l;i++){
+        if(ch[i]>=65&&ch[i]<=90 || ch[i]>=97&&ch[i]<=122){
+           if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u'||ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U'){
+               v++;
+           }
+            else{
+                c++;
+            }
+        }
+        if(ch[i]>=48&&ch[i]<=57){
+            d++;
+        }
+        if(ch[i]==' '){
+            s++;
+        }
+        if(!((ch[i]>=65&&ch[i]<=90)||(ch[i]>=97&&ch[i]<=122)||(ch[i]>=48&&ch[i]<=57)||(ch[i]==' '))){
+            sy++;
+        }
+      
+    }
+    printf("Vowels:%d\n",v);
+    printf("Consonants:%d\n",c);
+    printf("White Spaces:%d\n",s);
+    printf("Digits:%d\n",d);
+    printf("Symbols:%d",sy);
+    return 0;
+}
+
+
+QUESTION-11
+In a blind organization, they were playing the typing a keyword game and they want to correct the form of the word. So help them to by writing a program to remove all special symbols and print the characters of a string.
+ANSWER-11
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char ch[200];
+    gets(ch);
+    int i,n,j;
+    n=strlen(ch);
+     for(i=0;i<n;i++)
+  {
+    if(!((ch[i]>=65&&ch[i]<=90)||(ch[i]>=97&&ch[i]<=122)||(ch[i]==' ')))
+    {
+        for(j=i;j<n;j++){
+            ch[j]=ch[j+1];
+        }
+        i--;
+        n--;
+    }
+        ch[n+1]='\0';
+    }
+    
+ printf("%s",ch);
+    return 0;
+}
+
+
+QUESTION-12
+Accept string from the user and display only those characters which are present at an even index
+ANSWER-12
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {  
+    char ch[100];
+    int i,n;
+    gets(ch);
+    n=strlen(ch);
+    for(i=0;i<n;i++){
+        if(i%2==0)
+            printf("%d %c\n",i,ch[i]);
+    }
+    return 0;
+}
+
+
+QUESTION-13
+Given a string S(input consisting) of ‘’ and ‘#’. The length of the string is variable. The task is to find the minimum number of ‘’ or ‘#’ to make it a valid string. The string is considered valid if the number of ‘’ and ‘#’ are equal. The ‘’ and ‘#’ can be at any position in the string.
+ANSWER-13
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    char s[50];
+    int i,n,a=0,h=0;
+    gets(s);
+    n=strlen(s);
+    for(i=0;i<n;i++){
+        if(s[i]=='*')
+            a++;
+        if(s[i]=='#')
+            h++;
+    }
+    if(a>h){
+        printf("%d",a-h);
+    }
+    else if(h>a){
+        printf("%d",a-h);
+    }
+    else{
+        printf("0");
+    }
+    return 0;
+}
+
+
+QUESTION-14
+SecretMessage agency provides message encoding and decoding services for secure data transfer. The first step in decoding includes removal of special characters and the whitespaces from the message, as special characters and whitespaces do not hold any meaning. Write an algorithm to help the agency find the number of special characters and whitespaces in a given message.
+ANSWER-14
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char ch[200];
+    gets(ch);
+    int i,n,count=0;
+    n=strlen(ch);
+    for(i=0;i<n;i++){
+        if(!((ch[i]>=65&&ch[i]<=90)||(ch[i]>=97&&ch[i]<=122)||(ch[i]>=48&&ch[i]<=57||(ch[i]==' '))))
+            count++;
+    }
+    printf("%d",count);
+    return 0;
+}
+
+
+QUESTION-15
+The delivery requests of an e-commerce website are depicted in the form of strings tagged ‘a-z’ or ‘A-Z’. Each character of the string represents the number of products that need to be delivered for that respective code. Due to limited delivery windows the website has decided to deliver the products whose codes represents the largest and the smallest values in the string. The company needs to find out the total number of products delivered. Write an algorithm to find out the total number of products delivered.
+ANSWER-15
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char ch[50];
+    int i,n,sum=0,max,min;
+    gets(ch);
+    n=strlen(ch);
+    for(i=0;i<n;i++){
+        if(ch[i]>=65 && ch[i]<=90 || ch[i]>=97 &&ch[i]<=122){
+            if(min>ch[i]){
+                 min=ch[i];
+            }
+        }
+              if(max<ch[i]){
+                  max=ch[i];
+              }
+          }
+        sum=sum+min+max;
+        printf("%d",sum);
+    
+    return 0;
+}
+
+
+QUESTION-16
+An English school teacher is teaching how to build sentences for kindergarten students. She starts by teaching two words in a sentence, then 3 words and so on. The next step is that she asks the students to find which word in the sentence they have made has the maximum number of alphabets. The task here is to write program to find the longest word in each input sentence(str).
+ANSWER-16
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   char ch[100];
+ int count=0,max,i,j,index=0,n;
+ gets(ch);
+ n=strlen(ch);
+ index=0;
+ for(i=0;i<n;i++)
+ {
+  if(ch[i]!=' ')
+  {
+   count++;
+  }
+  else
+  {
+   if(count>max)
+   {
+    max=count;
+    index=i-max;
+   }
+   count=0;
+  }
+ 
+ if(count>max)
+ {
+  max=count;
+ }
+ }
+ printf("%d",max);
+    return 0;
+}
